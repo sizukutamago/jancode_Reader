@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		22C99C841DA96A5400F3D73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C99C831DA96A5400F3D73B /* AppDelegate.swift */; };
-		22C99C861DA96A5400F3D73B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C99C851DA96A5400F3D73B /* ViewController.swift */; };
 		22C99C891DA96A5400F3D73B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C99C871DA96A5400F3D73B /* Main.storyboard */; };
 		22C99C8C1DA96A5400F3D73B /* jancode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22C99C8A1DA96A5400F3D73B /* jancode.xcdatamodeld */; };
 		22C99C8E1DA96A5400F3D73B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C99C8D1DA96A5400F3D73B /* Assets.xcassets */; };
 		22C99C911DA96A5400F3D73B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C99C8F1DA96A5400F3D73B /* LaunchScreen.storyboard */; };
+		22C99C991DA96AFD00F3D73B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C99C981DA96AFD00F3D73B /* AVFoundation.framework */; };
+		22C99C9C1DA9776F00F3D73B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C99C851DA96A5400F3D73B /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		22C99C8D1DA96A5400F3D73B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22C99C901DA96A5400F3D73B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C99C921DA96A5400F3D73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22C99C981DA96AFD00F3D73B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		22C99C9A1DA96E7600F3D73B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C99C991DA96AFD00F3D73B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,8 @@
 		22C99C771DA96A5400F3D73B = {
 			isa = PBXGroup;
 			children = (
+				22C99C9A1DA96E7600F3D73B /* AVKit.framework */,
+				22C99C981DA96AFD00F3D73B /* AVFoundation.framework */,
 				22C99C821DA96A5400F3D73B /* jancode */,
 				22C99C811DA96A5400F3D73B /* Products */,
 			);
@@ -99,6 +105,7 @@
 				TargetAttributes = {
 					22C99C7F1DA96A5400F3D73B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = W69UP9GCZA;
 					};
 				};
 			};
@@ -138,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C99C9C1DA9776F00F3D73B /* ViewController.swift in Sources */,
 				22C99C8C1DA96A5400F3D73B /* jancode.xcdatamodeld in Sources */,
-				22C99C861DA96A5400F3D73B /* ViewController.swift in Sources */,
 				22C99C841DA96A5400F3D73B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,10 +262,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = jancode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = renshu.jancode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -266,10 +276,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = jancode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = renshu.jancode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
